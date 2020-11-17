@@ -6,21 +6,13 @@
 * its divided to 
 1- an admin priviliges which has the ability to view all the users (can be extended for custom purposes )
 
-![Screenshot from 2020-11-16 17-04-37](https://user-images.githubusercontent.com/67924603/99328846-9cb80880-2885-11eb-8d47-6a11e2e72c72.png)
-
+![](screenshots/Screenshot from 2020-11-16 17-04-37.png)
 
 2- users either student or professor which has the ability to view only their profiles ( can be extended for custom purposes ) 
-
-![Screenshot from 2020-11-16 17-00-10](https://user-images.githubusercontent.com/67924603/99328928-c07b4e80-2885-11eb-901a-1ed68f935715.png)
-
-![Screenshot from 2020-11-16 17-04-18](https://user-images.githubusercontent.com/67924603/99328949-cb35e380-2885-11eb-9561-8c9cbaa92a84.png)
 
 
 * enhanced with attractive designs for login and register page 
 
-
-![Screenshot from 2020-11-16 17-04-50](https://user-images.githubusercontent.com/67924603/99328963-d4bf4b80-2885-11eb-9d86-657379e23cd4.png)
-![Screenshot from 2020-11-16 17-07-03](https://user-images.githubusercontent.com/67924603/99328974-ddb01d00-2885-11eb-96e8-965ca47012a8.png)
 
 
 # To extend this project use the file named " documentation "
