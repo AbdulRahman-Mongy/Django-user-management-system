@@ -1,0 +1,69 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<style>
+	.profile-pic{
+		max-width: 200px;
+		max-height:200px;
+		margin: 0 auto;
+		border-radius: 50%;
+	}
+</style>
+
+<br>
+<div class="row">
+	<div class="col-md-3">
+		<div class="card card-body">
+			<hr>
+			<h3 style="text-align: center">Profile picture</h3>
+			<hr>
+			<img class="profile-pic" src="{{request.user.student.profile_pic.url}}" >
+			<img class="profile-pic" src="{{request.user.professor.profile_pic.url}}" >
+			<br><br>
+			<form method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				{{form.profile_pic}}
+				<br>
+				<br>
+				<input type="submit" value="Save changes" name="update_pic">
+			</form>
+
+		</div>
+	</div>
+	<div class="col-md-9">
+		<div class="card card-body">
+			<table class="table table-striped table-dark">
+
+			  <thead>
+				<tr>
+				  <th scope="col">ID_Number</th>
+				  <th scope="col">Username</th>
+				  <th scope="col">Name</th>
+					<th scope="col">Email</th>
+					<th scope="col">Role</th>
+				</tr>
+			  </thead>
+			  <tbody>
+					<tr>
+						<th scope="col">{{user.id_number}}</th>
+						<th scope="col">{{request.user}}</th>
+						<th scope="col">{{user.name}}</th>
+						<th scope="col">{{user.email}}</th>
+						{% if request.user.student is not None %}
+						<th scope="col">Student</th>
+						{% else %}
+						<th scope="col">Professor</th>
+						{% endif %}
+
+					</tr>
+
+			  </tbody>
+
+			</table>
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/css/register.css' %}">
+
+    <div class="login-box">
+      <img src="{%static 'accounts/img/logo.png'%}" class="avatar" alt="Avatar Image">
+      <h1>Register</h1>
+      <form method="POST">
+        {% csrf_token %}
+        <!-- USERNAME INPUT -->
+        <label for="username">Username</label>
+        {{form.username}}
+        <label for="id_number">ID_number</label>
+        <input type="text" name="id_number">
+        <label for="email">Email</label>
+        {{ form.email }}
+
+        <label for="choose_status">Status</label>
+
+          <select class="status" name="status">
+
+            <option value="student">Student</option>
+            <option value="professor">Professor</option>
+        </select><br><br>
+
+        <!-- PASSWORD INPUT -->
+        <label for="password">Password</label>
+        {{ form.password1 }}
+        <label for="password">Confirm Password</label>
+        {{ form.password2 }}
+
+        <input type="submit" value="Create Account">
+        <a href="{% url 'login' %}">Already have An account? ,  Login</a>
+        <p id="warning"> {{form.errors}} </p>
+      </form>
+    </div>
+{% endblock %}
+
+

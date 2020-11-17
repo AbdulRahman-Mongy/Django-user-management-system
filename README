@@ -1,0 +1,11 @@
+*Django management system for educational purposes 
+
+
+# Over view :-
+
+* its divided to 
+1- an admin priviliges which has the ability to view all the users (can be extended for custom purposes )
+2- users either student or professor which has the ability to view only their profiles ( can be extended for custom purposes ) 
+* enhanced with attractive designs for login and register page 
+
+# To extend this project use the file named " documentation "

@@ -1,0 +1,46 @@
+
+<style>
+
+#logout-link{
+    width : 80px ;
+    height : 25px ;
+    color: #fff;
+    margin-left : 10px;
+    background-color : #b80f22  ;
+    border-radius: 10px;
+    text-align : center ;
+}
+.hello-user{
+    font-size: 18px ;
+    color: #fff;
+    margin-left : 10px;
+
+}
+
+
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">UserProfile</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Profile
+        </a>
+     </ul>
+    <form class="form-inline my-2 my-lg-0">
+      {% if  request.user.is_authenticated %}
+      <span class="hello-user"> User : {{request.user}} </span>
+      <a id="logout-link" href="{% url 'logout' %}">Logout</a>
+      {% endif %}
+    </form>
+  </div>
+</nav>

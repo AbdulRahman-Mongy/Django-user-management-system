@@ -1,0 +1,26 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'accounts/css/login.css' %}">
+    <div class="login-box">
+      <img src="{%static 'accounts/img/logo.png'%}" class="avatar" alt="Avatar Image">
+      <h1>Login</h1>
+      <form method="POST">
+        <!-- USERNAME INPUT -->
+        {% csrf_token %}
+        <label for="username">Username</label>
+        <input type="text" placeholder="Enter Username" name="username">
+        <!-- PASSWORD INPUT -->
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter Password" name="password">
+        <input type="submit" value="Log In">
+
+        {% for m in messages %}
+
+        <p id="message"> {{m}} </p>
+
+        {% endfor %}
+        <a href="{% url 'register' %}">Don't have An account?</a>
+      </form>
+    </div>
+{% endblock %}
