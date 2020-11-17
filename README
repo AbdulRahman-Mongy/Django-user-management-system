@@ -6,7 +6,7 @@
 * its divided to 
 1- an admin priviliges which has the ability to view all the users (can be extended for custom purposes )
 
-<img src="screenshots/Screenshotfrom2020-11-1617-04-37.png">
+![](https://raw.githubusercontent.com/AbdulRahman-Mongy/Django-user-management-system/main/screenshots/Screenshotfrom2020-11-1617-04-37.png)
 2- users either student or professor which has the ability to view only their profiles ( can be extended for custom purposes ) 
 
 
